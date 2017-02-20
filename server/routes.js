@@ -4,6 +4,7 @@ const path = require('path');
 const request = require('request');
 
 router.get('/topstories', function (req, res) {
+	console.log('topstories called');
 	request('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty', function(err, response, body) {
 		res.send(body)		
 	})
